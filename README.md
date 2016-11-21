@@ -166,5 +166,8 @@ There are a number of items at the top of the current wishlist (in no particular
 * Comments
 * Sharring (social)
 * Feeds (rss)
+* Package as a gem
+* Move routing to the helper 
+* Provide ability to configure blog helper 
 
 If there are features you want but can not add your self for what ever reason just ping us at bloghelper@astillion.com and we'll see if we can add it in. If it's useful to us we'll do our best to get in in asap.
