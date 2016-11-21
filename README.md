@@ -33,6 +33,8 @@ author: "Matthew Smith"
 
 <p>This is a good question. Firstly, I did not want to use wordpress....
 ```
+3. Add the following routes to your application
+```
     #Blogs page
     get '/page_blogs.html' do
 			#Pagination start & end points
@@ -50,7 +52,7 @@ author: "Matthew Smith"
       erb :blog, :locals => {:blog => get_blog(params['year']+"-"+params['month']+"-"+params['day']+"_"+params['title']+".yml") }
     end
 ```
-3. Using the above data structures present the data in a template
+4. Using the above data structures present the data in a template
 *blogs.erb*
 ```
         <!--=== Content Part ===-->
