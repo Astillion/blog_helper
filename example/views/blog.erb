@@ -1,0 +1,33 @@
+<%= #Include header
+partial :"partials/header"
+%>
+    <!--=== Blog Posts ===-->
+    <div class="bg-color-light">
+      <div class="container content-sm">
+        <div class="row">
+          <!-- Blog All Posts -->
+          <div class="col-md-9">
+          <!-- News v3 -->
+          <div class="news-v3 bg-color-white margin-bottom-30">
+            <img class="img-responsive full-width" src="<%= blog[:header]['header_img'] %>" alt="">
+                <div class="news-v3-in">
+                  <ul class="list-inline posted-info">
+                    <li>By <a href="#"><%= blog[:header]['author'] %></a></li>
+                    <li>Posted <%= blog[:header][:date].strftime("%B %d, %Y") %></li>
+                  </ul>
+                  <h2><a href="#"><%= blog[:header][:title] %></a></h2>
+                   <p><%= blog[:header]['synopsis'] %></p>
+                   <%= blog[:blog] %>
+                </div>
+              </div>
+              <!-- End News v3 -->
+              <hr>
+            </div>
+            <!-- End Blog All Posts -->
+          </div>
+        </div><!--/end container-->
+    </div>
+    <!--=== End Blog Posts ===-->
+<%= #include header
+partial :"partials/footer"
+%>

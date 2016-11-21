@@ -1,0 +1,22 @@
+---
+header_img: '/blog_that_could.png'
+synopsis: "This is what the example blog should look like, this is the synopsis field and the content can be provided below..."
+author: "Matthew Smith"
+---
+<h1>Some HTML</h1>
+
+<p>Now that you have the example blog running you can see that the whole things works</p>
+
+<h1>Things to know</h1>
+<ul>
+  <li>The valid headers for a blog are above with the exception of 'title' which can be used to override the filename as the title. This is  useful if you wish to have special characters in the title.</li>
+  <li>This is not tested at scale. In fact the largest test case I had it under was 10 blogs during development.</li>
+  <li>It will likely not be performant but as needs must i will fix it...</li>
+  <li>You can actually just push this directory into heroku and get a free blog with just a simple cost of a Domaon name and your won Html skills</li>
+</ul>
+
+<h1>Enhancements</h1>
+
+<p>We will endevour to keep the blog.rb helper and examples up to date as and when we add new features in and at some point look to see about makign it some how easier to install but for now this is what we have</p>
+
+<p>If you wish to use Blog helper that's fantastic! if you extend, fix bugs or generally make it better please feel free to submit a pull request. It will be accepted 99% of the time!</p>
