@@ -155,7 +155,7 @@ Adding a blog to site is simple.
 
 # Examples
 
-There is a horrible looking example in the [example] folder. Check it out.
+There is a horrible looking example in the [example](example) folder. Check it out.
 There is a live version here: http://www.astillion.com/page_blogs.html
 
 # What's next
