@@ -18,7 +18,7 @@ Adding a blog to site is simple.
 
   ```
 
-i.e.
+  i.e.
 
   ```
 
@@ -28,7 +28,7 @@ i.e.
 
 2. Next you need to create a blog with the following content
 
-  ```
+  ```yaml
 
   ---
   header_img: '/assets/img/blog/blog_that_could.png'
@@ -67,7 +67,7 @@ i.e.
 4. Using the above data structures present the data in a template
 **blogs.erb**
 
-  ```
+  ```html
 
           <!--=== Content Part ===-->
           <div class="container content">
@@ -119,7 +119,7 @@ i.e.
 
 **blog.erb**
 
-  ```
+  ```html
 
       <!--=== Blog Posts ===-->
       <div class="bg-color-light">
