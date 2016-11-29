@@ -17,7 +17,6 @@
 
 ########################################################
 
-
 require 'sinatra/base'
 require 'date'
 require 'yaml'
@@ -65,12 +64,16 @@ module Sinatra
             blog = $'
           end
           blog_content = blog
-          header_content = YAML.load(header)
-					if type == 'blog'
-						return blog_content
-					else
-						return header_content
-					end
+          begin
+            header_content = YAML.load(header)
+            if type == 'blog'
+              return blog_content
+            else
+              return header_content
+            end
+          rescue
+            return {error: "Blog with name #{fn} has a formatting error"} 
+          end
         else
           return {error: "Blog with name #{fn} not found"} 
         end
@@ -82,8 +85,12 @@ module Sinatra
 
         #Get all files and order them by date
         Dir[BLOGS_DIR + "*.yml"].each do |blog|
-          blog_details = YAML.load_file(blog)
-          blogs.push({date: get_date(blog), blog_title_raw: CGI.escape(get_title(blog, true)), blog_title: get_title(blog), blog_header_img: blog_details["header_img"], synopsis: blog_details["synopsis"]})
+          blog_details = get_header_or_blog(blog,'header')
+          if !blog_details.has_key?(:error)
+            blogs.push({date: get_date(blog), blog_title_raw: CGI.escape(get_title(blog, true)), blog_title: get_title(blog), blog_header_img: blog_details["header_img"], synopsis: blog_details["synopsis"]})
+          else
+            puts blog_details
+          end
         end
         return sort_blogs(blogs)
       end
